@@ -1,5 +1,7 @@
 This is made as part of cohort 3.0 of Harkirat Singh.
 
+The Inspiration.html file is used as a inspriational reference.
+whereas the Todo.html is the main html file
 
 Was able to complete it to a certain level atleast.
 
