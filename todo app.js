@@ -44,11 +44,27 @@ function addTodo() {
 function editTodo(index) {
   const input = document.getElementById("mod").value.trim();
 
-
   const element = document.getElementById("todo-" + index);
 
+  const h4 = document.createElement("h4");
+  h4.innerHTML = index + ". " + input;
+
+  const button = document.createElement("button");
+  button.textContent = "Modify";
+  button.setAttribute("onclick", "editTodo(" + index + ")");
+
+  const button2 = document.createElement("button");
+  button2.textContent = "delete";
+  button2.setAttribute("onclick", "deleteTodo(" + index + ")");
+
+  const newEl= document.createElement("div");
+  newEl.setAttribute("id", "todo-" + index);
+  newEl.appendChild(h4);
+  newEl.appendChild(button);
+  newEl.appendChild(button2);
+
   if (element) {
-    element.textContent = index + ". " + input;
+    element.parentNode.replaceChild(newEl, element);
   }
 
 }
