@@ -46,7 +46,7 @@ function editTodo(index) {
 
   const element = document.getElementById("todo-" + index);
 
-  const h4 = document.createElement("h4");
+  const h4 = document.createElement("h4");  
   h4.innerHTML = index + ". " + input;
 
   const button = document.createElement("button");
